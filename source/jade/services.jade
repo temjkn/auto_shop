@@ -1,0 +1,58 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Услуги
+		include inc/head
+	body(class="p-services")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item Услуги
+				.b-title-1 Услуги
+				+b('').list
+					+e('').cols-wrap
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Каркасные дома
+									+e('span').text_last Выполняем все этапы строительства каркасных домов, начиная от создания проекта, заканчивая проводкой коммуникаций
+									+b('a')(href='#').btn-green Смотреть проекты
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Дома из пеноблоков
+									+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля, использовать различные сложные формы и необычные дизайнерские решения.
+									+b('a')(href='#').btn-green Смотреть проекты
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Дачные домики
+									+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля, использовать различные сложные формы и необычные дизайнерские решения.
+									+b('a')(href='#').btn-green Смотреть проекты
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Каркасные дома
+									+e('span').text_last Выполняем все этапы строительства каркасных домов, начиная от создания проекта, заканчивая проводкой коммуникаций
+									+b('a')(href='#').btn-green Смотреть проекты
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Каркасные дома
+									+e('span').text_last Выполняем все этапы строительства каркасных домов, начиная от создания проекта, заканчивая проводкой коммуникаций
+									+b('a')(href='#').btn-green Смотреть проекты
+
+
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

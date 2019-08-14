@@ -1,0 +1,21 @@
+//- include helpers/bemto
+//- include helpers/variables
+//- include helpers/mixins
+
+//- -bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title 99456
+		include inc/head
+	body
+		include my_elements/navigation
+		include my_elements/my_header
+		.container
+			include my_elements/catalog
+			.content
+				include my_elements/banners
+				include my_elements/ordersAndAction
+				include my_elements/tire_selection
+			

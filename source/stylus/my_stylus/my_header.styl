@@ -1,0 +1,134 @@
+
+.header_wrapper
+    background #f8f8f8
+header
+    max-width $max-width
+    margin $margin_center
+    height 175px
+    padding-top 3%
+header>div,ul,a
+    display table-cell
+.logo
+    position relative
+    width 250px
+    margin-right 6%
+    img
+        position absolute
+        top -20px
+        z-index 1
+    .logo__number
+        color #cb041d
+        position absolute
+        left 26px
+        top -9px
+        font-size 4.4em
+        font-weight bold
+        text-shadow 1px 1px 5px black
+        z-index 3
+    .logo__url
+        margin-top 3.8%
+        margin-left 56px
+        position relative
+        z-index 2
+        padding-right 26px
+    .button
+        border-radius 8px 16px 16px 8px
+        height 37px
+        width 181px
+        background $red_gradient
+        font-size 36px
+    .button::before
+        display none
+.logo__discr
+    font-size 11px
+    margin-left 93px
+    font-weight 500
+.search__list
+    padding-left 7.4%
+    vertical-align top
+    position relative
+    width 47.2%
+    li
+        position relative
+        display inline-block
+        font-size .8em
+    .disable
+        text-decoration underline
+        color #cccccc
+    .crumbs
+        font-size 14px
+        padding-right 11px
+        margin 21px 9px 6px 10px
+    li:nth-child(1)::after
+        position absolute
+        right 0
+        bottom 0
+        content ''
+        height 100%
+        border-right 2px solid #c4c4c4
+    .crumbs:nth-child(2)
+        margin 0
+        margin-bottom 7px
+    input[type=search]
+        position relative
+        border none
+        color #878787
+        font-size 18px
+        height 50px
+        min-width 280px
+        padding-left 27px
+        border 1px solid rgb(231, 231, 231)
+        border-radius: 10px;
+        background-color: rgb(247, 247, 247)
+        box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.14)
+    .submit
+        position absolute
+        top 0
+        right -39px
+        width 50px
+        height 50px
+        content ""
+        border-radius: 10px
+        border none
+        background $red_gradient
+        span 
+            display block
+            width 50px
+            height 50px
+            background url(../img/search.png) no-repeat
+            background-position 15px 15px
+.contactTimeWork
+    vertical-align top
+    p
+        font-size: 12px
+        color: rgb(112, 109, 109)
+        line-height: 1.25
+        text-align: center
+        margin-top -3px
+    ul 
+        display block
+        margin-top 14px
+        li
+            display inline-block
+            position relative
+            width 49%
+            height 25px
+            line-height 25px
+            margin-bottom 2px
+            padding-left 25px
+            font-size 14px
+    .phone_icon
+        position absolute
+        width 20px
+        height 20px
+        top 2px
+        left 0
+    .velcome
+        background url(../img/velcom.png)
+    .mts
+        background url(../img/mts.png)
+    .skupe
+        background url(../img/skype.png)
+    a[href="skype:nameScype?call"]
+        font-size .927em
+ 

@@ -1,0 +1,212 @@
+.tire_selection
+    position relative
+    background-color #f7f7f7
+    margin-top 16px
+    .row 
+        padding-left 25px
+        padding-right 11px
+        border-bottom 1px solid rgb(232, 232, 232)
+        padding-bottom 2px
+    .table-col,h3
+        display inline-block
+    .table-col
+        vertical-align top
+        margin-top 8px
+        margin-bottom 13px
+    h3
+        margin-left 39%
+        margin-right 6.6%
+        margin-top 12px
+        text-transform uppercase
+        font-weight bold
+        font-size 16px
+    span
+        font-size .98em
+        color rgb(68, 68, 68)
+    select,input
+        width 164px
+        height 28px
+        position relative
+        border-style solid
+        border-width 1px
+        border-color rgb(231, 231, 231)
+        background-color rgb(255, 255, 255)
+        box-shadow inset 0px 1px 3px 0px rgba(0, 0, 0, 0.14)
+    select
+        appearance none
+        background rgb(255, 255, 255) url(../img/arrow_down.png) no-repeat
+        background-position 136px 0
+        margin-left 5px
+    input
+        width 73px
+        padding-left 5px
+    .make
+        margin-left 44px
+        margin-right 15px
+    label 
+        font-size 11px
+        margin-left 6px
+    #max-cost
+        margin-left 15px
+    h4 
+        text-transform uppercase
+        text-align center
+        margin-bottom 19px
+        margin-top -4px
+    .border-right 
+        width 49.4%
+        border-right 1px solid rgb(232, 232, 232)
+        margin-top 22px
+        margin-bottom 17px
+        div
+            display inline-block
+            position relative
+        div:nth-child(2)
+            margin-left 25px
+        input
+            width 78px
+            height 22px
+            margin-top 7px
+            display inline-block
+        label 
+            display block
+    #height,label[for='height']
+        margin-left 16px
+    .radius
+        display block 
+        position absolute
+        bottom 6px
+        left 22px
+    #radius,label[for='radius']
+        margin-left 38px
+    .slash
+        position absolute
+        bottom -1px
+        left -1px
+        background url(../img/slash.png) no-repeat
+        width 15px
+        height 23px
+    .add_param
+        padding-top 15px
+        padding-left 12px
+        margin-bottom 28px
+        h4 
+            margin-bottom 31px
+        span 
+           font-size 11px 
+        span:nth-child(4)
+            margin-left 21px
+        select
+            width 77px
+            height 24px
+            background-position: 52px -2px
+            margin 0
+    li> input
+        width auto
+.tire_selection .row:nth-child(3) .table-col
+    width 32.9%
+    margin-top 20px
+    h4 
+        margin-bottom 13px
+.option
+    display block
+    padding-left 34%
+    position relative
+    li:first-child
+        margin-bottom 8px
+    input
+        height auto
+    label 
+        margin-left 1px
+
+    input:checked, //стилизую чекбоксы
+    input:not(:checked)
+        position absolute
+        left -99999px
+    input[type="checkbox"]:checked + label, 
+    input[type="checkbox"]:not(:checked) + label
+        display inline-block
+        position relative
+        padding-left 17px
+        cursor pointer
+    input[type="checkbox"]:checked + label:before, 
+    input[type="checkbox"]:not(:checked) + label:before 
+        content ""
+        position absolute
+        left 0px
+        top 0px
+        width 10px
+        height 10px
+        border 1px solid #dddddd
+        background-color #ffffff
+    input[type="checkbox"]:checked + label:before, 
+    input[type="checkbox"]:not(:checked) + label:before
+        border-radius 2px
+    input[type="checkbox"]:checked + label:after, 
+    input[type="checkbox"]:not(:checked) + label:after
+        content ""
+        position absolute
+    input[type="checkbox"]:checked + label:after, 
+    input[type="checkbox"]:not(:checked) + label:after
+        left 1px
+        top 1px
+        width 8px
+        height 5px
+        border-left 2px solid #61c872
+        border-bottom 2px solid #61c872
+        transform rotate(-54deg)
+    input[type="checkbox"]:not(:checked) + label:after
+        opacity 0
+    input[type="checkbox"]:checked + label:after
+        opacity 1
+    input[type="checkbox"]:checked ~ label:before        
+        box-shadow inset 0 0 4px #bfbfbf
+    //закончил стилизацию чекбокса
+
+.producing_country
+    text-align center
+    select
+        margin-left 0
+        width 167px
+        background-position 138px 0
+    .button
+        text-transform uppercase
+        width 83%
+        margin auto
+        margin-top 50px
+        line-height 40px
+        font-weight 600
+        background #e00000
+        cursor pointer
+.small_banner
+    color #696969
+    margin-top 10px !important
+    padding-left 29px
+    padding-right 12px
+    .action_today
+        margin-left 15px
+    h4
+        font-size 15px
+        font-weight bold
+        margin-left 5px
+        text-align left
+        color #545454
+    strong
+        font-size 22px
+    .action,h4
+        display inline-block
+    .action 
+        background url(../img/action_today.png) no-repeat
+        background-size cover
+        width 41px
+        height 41px
+    .discount
+        font-size 30px
+        margin 8px 20px
+        .red_color
+            color #bc0217
+.small_banner>p
+    text-align center
+    text-align-last justify
+    font-size 15px
+    line-height 17px

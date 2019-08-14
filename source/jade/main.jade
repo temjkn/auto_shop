@@ -1,0 +1,297 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title main
+		include inc/head
+	body(class="p-main")
+		include partials/header
+		
+		.l-common-wrap
+			+b('section').main-section
+				.l-container
+					+e('').big-title
+						+e('').big-title-cell
+							+b('span').big-number-main 2509
+						+e('').big-title-cell
+							+e('p').main-text за 15 лет существования квадратных метров домов построено
+					+e('').text-wrap
+						//- +e('p').text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов
+						+b('a').btn-yellow Наши услуги
+						+b('a').btn-white Получить консультацию
+			.l-container
+				+b('').jumbotron
+					+b('img')(src='../img/logo-white-sm.png').logo
+					+b('span').title-text Каркасные дома заводского изготовления
+				+b('').list
+					+e('').cols-wrap
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/600x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 1
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 2
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 3
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+				+b('section').text-section
+					+e('').left
+						+b('span').title-1.no-margin Уютные, красивые и долговечные  частные дома по разумной цене
+						p.subtext Стандартные комплекты домов:
+						+b('').complects-list
+							- for(var i = 0; i < 4; i++)
+								+b('a')(href='#' style='background-image: url(http://placehold.it/162x356)').complect-item
+									+e('').top
+										+e('').top-l
+											+e('p').subtitle Комплект
+											+e('span').title Стандарт
+										+e('').top-r
+											+e('span').price 140 руб./м.кв.
+									+b('ul').complect-list
+										li Перекрытия и черновой настил
+										li Стеновые панели
+										li Кровельная система
+						
+					+e('').right
+						- for(var i = 0; i < 5; i++)
+							p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+							p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+			+b('').project-outer-wrap
+				.l-container
+					+b('').project-wrap
+						+e('').left
+							+b('').project-slider
+								+e('').wrap.owl-carousel
+									+e('')(data-slide-id='1').item
+										+e('img')(src='../img/slider-image-test.jpg')
+									+e('')(data-slide-id='2').item
+										+e('img')(src='http://placehold.it/875x502')
+									- for(var i = 3; i < 10; i++)
+										+e('')(data-slide-id=i).item
+											+e('img')(src='../img/slider-image-test.jpg')
+								+e('').thumbs-wrap
+									+b('').project-thumbs-carousel.owl-carousel.js-thumbs-carousel
+										a(href='#' data-id='1').js-thumb-link.js-act
+											+e('img')(src='http://placehold.it/109x97').img
+										- for(var i = 2; i < 10; i++)
+											a(href='#' data-id=i).js-thumb-link
+												+e('img')(src='http://placehold.it/109x97').img
+								+e('').inform-wrap
+									+e('').text-bottom
+										+b('').table-price.slider
+											+e('').left
+												+e('span').subtitle Общая площадь:
+												+e('span').item 295,3
+												+e('span').caption кв.метров
+											+e('').right
+												+e('span').subtitle этажность:
+												+e('span').item 2
+												+e('span').caption этажа
+						+e('').right
+							+b('').project-inform
+								+b('span').title-big Каркасный дом «Универсал-А»
+								+b('').table-price
+									+e('').left
+										+e('span').subtitle стоимость строительства:
+										+e('span').item от 149640.<sup>00</sup>
+										+e('span').caption белорусских рублей
+									+e('').right
+										+e('span').subtitle стоимость комплекта:
+										+e('span').item от 44460.<sup>00</sup>
+										+e('span').caption белорусских рублей
+								+e('span').title Базовый комплект поставки включает
+								+e('span').subtitle Наружная стена:
+								ul
+									li OSB-3 10мм с внешней стороны стены;
+									li OSB-3 10мм с внешней стороны стены;
+									li OSB-3 10мм с внешней стороны стены;
+									li OSB-3 10мм с внешней стороны стены;
+								+e('span').subtitle внутренняя стена:
+								ul
+									li OSB-3 10мм с внешней стороны стены;
+								+e('span').subtitle внутренняя стена:
+								ul
+									li OSB-3 10мм с внешней стороны стены;
+								+e('span').subtitle внутренняя стена:
+								ul
+									li OSB-3 10мм с внешней стороны стены;
+								+b('a').btn-yellow Заказать дом
+								+b('a').btn-green Узнать больше
+			.l-container
+				+b('').request-description
+					+e('').text
+						+b('span').title-2.no-margin-top Технологии строительства
+						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+						+b('a').btn-green.sm Подробнее о технологии
+				+b('').home-request
+					+e('').inner
+						+e('').text-wrap
+							+e('span').title 15 лет строим дома
+							+e('span').subtitle для вас и вашей семьи
+						+e('').table-wrapper
+							+e('').cell
+								+e('').table-wrapper
+									+e('').cell_half
+										+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' required).input
+									+e('').cell_half
+										+b('input')(type='text' name='phone' tabindex='2' id='phone' placeholder='Контактный телефон' required).input
+							+e('').cell_btn
+								+b('input')(type='submit' value='Подать заявку').btn-yellow
+					//- +e('').left
+					//- 	+e('span').title Хотите такой дом?
+					//- 	+e('span').text-left оставьте заявку
+					//- +e('').right
+					//- 	+e('span').text Строительство домов по стандартному или индивидуальному проекту. Только лучшие материалы и <span>5 лет гарантии</span>. От звонка нашего менеджера до готового дома — всего 3 месяца! Подайте заявку сейчас и мы рассчитаем смету по вашему проекту <span>бесплатно</span>!
+					//- 	+e('').table-wrapper
+					//- 		+e('').cell
+					//- 			+e('').table-wrapper
+					//- 				+e('').cell_half
+					//- 					+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' required).input
+					//- 				+e('').cell_half
+					//- 					+b('input')(type='text' name='phone' tabindex='2' id='phone' placeholder='Контактный телефон' required).input
+					//- 		+e('').cell_btn
+					//- 			+b('input')(type='submit' value='Подать заявку').btn-yellow
+				+b('span').title-1.margin-sm Почему выбирают каркасные дома
+				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+				+b('').advantages
+					+e('').item
+						+e('img')(src='img/advantage-1.png').img
+						+b('span').title-3 Экологическая <p> чистота
+					+e('').item
+						+e('img')(src='img/advantage-2.png').img
+						+b('span').title-3 Легкая <p> конструкция
+					+e('').item
+						+e('img')(src='img/advantage-3.png').img
+						+b('span').title-3 Теплоизоляционные <p> качества
+					+e('').item
+						+e('img')(src='img/advantage-4.png').img
+						+b('span').title-3 Высокая <p> сейсмоустойчивость
+					+e('').item
+						+e('img')(src='img/advantage-5.png').img
+						+b('span').title-3 Всесезонность <p> строительства
+					+e('').item
+						+e('img')(src='img/advantage-6.png').img
+						+b('span').title-3 Быстрота <p> возведения
+				+b('span').big-title.line-thru Другие услуги и материалы
+				+b('').cols-5.js-material
+					+e('').cols-wrap
+						+e('').col
+							+b('').material-item
+								+e('a')(href='#' style='background-image: url(../img/material-bg.jpg)').img-wrap
+								+e('').text.bottom
+									+e('span').title OSB-плиты
+									p Сегодня кровли с использованием  металлозубчаных пластин в качестве соеденительных элементов применяются в разлычных странах.
+						+e('').col
+							+b('').material-item
+								+e('').text.top
+									+e('span').title Утеплитель PAROC
+									p Концерн Paroc производит изделия для  теплоизоляции только из каменной ваты, качество материалов основываеться на авторитетных международных стандартах.
+								+e('a')(href='#' style='background-image: url(../img/material-bg.jpg)').img-wrap
+						+e('').col
+							+b('').material-item
+								+e('a')(href='#' style='background-image: url(../img/material-bg.jpg)').img-wrap
+								+e('').text.bottom
+									+e('span').title Стропильные системы и конструкции
+									p Фермы – это основа кровли. Деревянные  конструкции прочны, долговечны, пролет достигаeт длинны до 30 метров.
+						+e('').col
+							+b('').material-item
+								+e('').text.top
+									+e('span').title Устройство кровли “под  ключ”
+									p Для кровельных работ используются  фирменные стропильные систем Mitek.
+								+e('a')(href='#' style='background-image: url(../img/material-bg.jpg)').img-wrap
+						+e('').col
+							+b('').material-item
+								+e('a')(href='#' style='background-image: url(../img/material-bg.jpg)').img-wrap
+								+e('').text.bottom
+									+e('span').title Климатические системы
+									p Воздушное отопление известно  человечеству уже много сотен лет.
+				+b('').title-box
+					+e('').right
+						+b('span').btn-green.sm Все новости
+					+e('').left
+						+b('span').big-title.line-thru Новости компании
+				+b('').list
+					+e('').cols-wrap
+						- for(var i = 0; i < 3; i++)
+							+e('').col
+								+b('article').news-list-item
+									+e('a')(href='').img-wrap
+										+e('img')(src='http://placehold.it/480x300').img
+									+e('').content
+										+e('a')(href='#').title Скидки на проектирование дома до 10% 
+										+e('p').text Lorem Ipsum - это текст-"рыба", часто используемый в печати и в
+				+b('').title-box
+					+e('').right
+						+b('span').btn-green.sm Все работы
+					+e('').left
+						+b('span').big-title.line-thru Наши работы										
+				+b('').list
+					+e('').cols-wrap
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 1
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 2
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+e('').inner
+										+b('span').title-2 Проект 3
+										+e('span').text_last При использовании газосиликата можно действовать в рамках любого архитектурного стиля
+									+b('a')(href='#').btn-green Узнать больше
+				+b('').contacts-page
+					+b('').information
+						+b('span').title-1 Контактная информация
+						+e('span').sub-title Адрес:
+						+e('span').text 220085, Республика Беларусь, г. Минск, ул. Селицкого, 25/1
+						+e('span').sub-title Контактные телефоны:
+						+e('span').text <a href='#' class='g-link'>+375 (17) 346-23-98</a>; <a href='#' class='g-link'>+375 (29) 674-674-9</a>
+						+e('span').sub-title Режим работы:
+						+e('span').text 10:00-19:00 пн-пт
+						+e('span').sub-title Электронная почта:
+						+e('span').text_last <a href='#' class='g-link'>info@belhouse.by</a> <br> <a href='#' class='g-link'>director@belhouse.by</a>
+						+b('a')(href='#' data-id='#callback').btn-yellow.im-popup-link Заказать звонок
+					+b('').feedback
+						+e('').green-wrapper
+							+b('span').title-1_white Обратная связь
+							+e('span').sub-title_white Наши специалисты ответят на любые ваши вопросы
+							+e('').table
+								+e('').cell
+									+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' ).input
+								+e('').cell
+									+b('input')(type='text' name='email' tabindex='2' id='email' placeholder='Электронная почта').input
+							+e('').input-wrapper
+								+b('input')(type='text' name='subject' tabindex='2' id='subject' placeholder='Тема сообщения').input
+							+e('').input-wrapper_high
+								+b('textarea')(name='message' tabindex='3' placeholder='Текст сообщения').input_text-area
+							+b('input')(type='submit' value='Отправить сообщение').btn-yellow
+		include partials/popups
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

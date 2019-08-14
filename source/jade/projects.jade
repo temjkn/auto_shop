@@ -1,0 +1,105 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Проекты
+		include inc/head
+	body(class="p-projects")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item Услуги
+					+e('a')(href='#').item Каркасные дома
+				.b-title-1-min-bot-margin Каркасные дома
+				.b-text-wrap
+					p На сайте представлена небольшая часть типовых проектов деревянных каркасных домов. С остальными типовыми проектами вы можете ознакомиться, посетив компанию СООО «Каркасные строительные технологии». Цены приведены за базовый комплект поставки (смотрите комплектацию в разделе «базовый комплект поставки»). Цены указаны для резидентов РБ.
+				+b('').list
+					+e('').cols-wrap
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/600x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 1
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 2
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 3
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 4
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 5
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 6
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 7
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 8
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+						+e('').col
+							+e('')(style="background-image: url('http://placehold.it/480x300')").item
+								+b('').cover
+									+b('span').title-2 Проект 9
+									+e('span').text Расчетная площадь: 64 м2
+									+e('span').text_last Базовый комплект
+									+b('a')(href='#').btn-green Узнать больше
+				+b('').pagination
+					+e('').wrapper
+						+e('a')(href='#').arrow_disabled «
+						+e('a')(href='#').item_disabled 1
+						+e('a')(href='#').item 2
+						+e('').item_disabled ...
+						+e('a')(href='#').item 10
+						+e('a')(href='#').item 11
+						+e('a')(href='#').arrow »
+					
+
+
+
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

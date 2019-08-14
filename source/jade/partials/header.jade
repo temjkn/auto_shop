@@ -1,0 +1,26 @@
++b('header').header
+	.l-container
+		+e('').wrapper
+			+b('')(id='hamburger').mob-nav
+				+b('').hamburger
+					span
+					span
+					span
+					span
+		+b('img')(src='img/logo-header.png').logo
+		+b('').mobile-menu
+			+e('').scroll-wrap
+				+b('nav').nav
+					+e('a')(href='#').item Услуги
+					+e('a')(href='#').item Прайсы
+					+e('a')(href='#').item Технология
+					+e('a')(href='#').item О компании
+					+e('a')(href='#').item Контакты
+				+b('').contacts_mob
+					+e('span').phone-title Звоните нам по телефонам
+					+e('').phone +375 (29) 674-674-9
+					+e('').phone +375 (17) 346-23-98
+		+b('')(id='contacts').contacts
+			+e('span').phone-title Звоните нам по телефонам
+			+e('').phone +375 (29) 674-674-9
+			+e('').phone +375 (17) 346-23-98

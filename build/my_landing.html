@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>99456</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/common.min.css"><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="navigationWrap">
+      <div>
+        <ul class="navigationWrap__navList">
+          <li> <a href="#">Полезная информация</a></li>
+          <li> <a href="#">О магазине</a></li>
+          <li> <a href="/my_contacts.html">Контакты</a></li>
+          <li> <a href="#">Доставка</a></li>
+          <li> <a href="#">Акции</a></li>
+        </ul>
+        <div class="button"><a href="#"> <span class="basket"> </span>Корзина</a></div>
+      </div>
+    </div>
+    <div class="header_wrapper">
+      <header><a href="my_landing.html" class="logo"><img src="img/whell.png">
+          <div class="logo__number">4</div>
+          <div class="logo__url button">RUN.BY</div>
+          <div class="logo__discr">АВТОШИНЫ ОНЛАЙН</div></a>
+        <ul class="search__list">
+          <li class="crumbs"><a href="#">Каталог и цены</a></li>
+          <li class="crumbs disable"><a href="#">Статьи и полезная информация</a></li>
+          <li>
+            <input type="search" placeholder="Поиск" id="search">
+            <div class="submit"><span></span></div>
+          </li>
+        </ul>
+        <div class="contactTimeWork">
+          <p>Прием заказов по телефону: круглосуточно. <br> Работаем без выходных!</p>
+          <ul>
+            <li> <a href="tel:+80296037578"><span class="phone_icon velcome"> </span>029 603-75-78 </a></li>
+            <li><a href="tel:+80296037578"><span class="phone_icon velcome"> </span>029 603-75-78 </a></li>
+            <li><a href="tel:+80296037578"><span class="phone_icon mts"> </span>029 603-75-78 </a></li>
+            <li><a href="skype:nameScype?call"><span class="phone_icon skupe"> </span>Skype: nameScype</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <div class="container">
+      <ul class="catalog">
+        <h3>КАТАЛОГ</h3>
+        <li> <span class="arrow"></span>ТИП АВТО
+          <ul class="small">
+            <li><a href="">Легковой</a></li>
+            <li><a href="">Грузовой</a></li>
+          </ul>
+        </li>
+        <li> <span class="arrow"></span>СЕЗОН
+          <ul class="small">
+            <li><a href="">
+                 
+                Зимняя</a></li>
+            <li><a href="">Летняя</a></li>
+            <li><a href="">Всесезонная</a></li>
+          </ul>
+        </li>
+        <li> <span class="arrow"></span>МАРКИ
+          <ul class="small">
+            <li><a href="">Continental</a></li>
+            <li><a href="">Bridgestone</a></li>
+            <li><a href="">Toyo</a></li>
+            <li><a href="">Baruum</a></li>
+            <li><a href="">Nexen</a></li>
+            <li><a href="">Maxxis</a></li>
+            <li><a href="">Linglong</a></li>
+            <li><a href="">Landsail</a></li>
+            <li><a href="">Delinte</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="content">
+        <div class="banners">
+          <div class="workTime">
+            <p>24/7</p>
+            <div class="button">Работаем каждый день <br> Круглосуточно</div>
+          </div>
+          <div class="car"><img src="../img/car.png" alt=""></div>
+          <div class="carParts">
+            <div class="button">Проверка электроники <br> от наших партнеров “АКБ7”  БЕСПЛАТНО!</div>
+          </div>
+        </div>
+        <div class="ordersAndAction">
+          <div class="button black"><a href="">Быстрый заказ</a></div>
+          <div class="button"><a href=""><span class="action"></span>Акции</a></div>
+        </div>
+        <form action="post" class="tire_selection">
+          <div class="row">
+            <h3>ПОДОБРАТЬ_ШИНЫ</h3>
+            <div class="table-col"><span>Тип авто:</span>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="table-col"><span>Сезон:</span>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="table-col make"><span>Марка:</span>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="table-col"><span>Цена:</span>
+              <label>от
+                <input type="textarea" id="min-cost">
+              </label>
+              <label>до
+                <input type="textarea" id="max-cost">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-col border-right">
+              <h4>габаритные размеры</h4>
+              <div>
+                <label for="width">Ширина</label>
+                <input type="textarea" id="width">
+              </div>
+              <div><span class="slash"></span>
+                <label for="height">Высота</label>
+                <input type="textarea" id="height">
+              </div>
+              <div> <span class="radius">R</span>
+                <label for="radius">Диаметр</label>
+                <input type="textarea" id="radius">
+              </div>
+            </div>
+            <div class="table-col add_param">
+              <h4>дополнительные параметры</h4><span>Индекс нагрузки</span>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 </option>
+              </select><span>Индекс скорости</span>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-col">
+              <h4>опции:</h4>
+              <ul class="option">
+                <li>                   
+                  <input type="checkbox" id="Runflat">
+                  <label for="Runflat">Runflat</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spikes">
+                  <label for="spikes">Шипы            </label>
+                </li>
+              </ul>
+            </div>
+            <div class="table-col producing_country">
+              <h4>страна-производитель:</h4>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <div id="pick_tires" class="button">подобрать</div>
+            </div>
+            <div class="table-col small_banner">
+              <div class="action_today"><span class="action"></span>
+                <h4><strong>акция</strong><br>сегодня</h4>
+              </div>
+              <div class="discount">
+                <p>Скидка <span class="red_color">20%</span></p>
+              </div>
+              <p>Каждому покупателю <br> двух шин марки Bics  двух шин марки Bics  двух шин марки Bics</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

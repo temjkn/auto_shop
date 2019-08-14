@@ -1,0 +1,82 @@
+form(action="post").tire_selection
+    .row
+        h3 ПОДОБРАТЬ_ШИНЫ
+        .table-col
+            span Тип авто:
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+        .table-col
+            span Сезон:
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+        .table-col.make
+            span Марка:
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+        .table-col
+            span Цена:
+            label от
+                input(type="textarea")#min-cost
+            label до
+                input(type="textarea")#max-cost
+    .row
+        .table-col.border-right
+            h4 габаритные размеры
+            div
+                label(for="width") Ширина
+                input(type="textarea")#width            
+            div
+                span.slash
+                label(for="height") Высота
+                input(type="textarea")#height 
+            div  
+                span.radius R
+                label(for="radius") Диаметр
+                input(type="textarea")#radius  
+        .table-col.add_param
+            h4 дополнительные параметры
+            span Индекс нагрузки
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3 
+            span Индекс скорости
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3 
+    .row
+        .table-col
+            h4 опции:
+            ul.option
+                li                    
+                    input(type="checkbox")#Runflat
+                    label(for="Runflat") Runflat
+                li
+                    input(type="checkbox")#spikes
+                    label(for="spikes") Шипы            
+        .table-col.producing_country
+            h4 страна-производитель:
+            select
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+            .button#pick_tires подобрать
+        .table-col.small_banner
+            .action_today
+                span.action
+                h4
+                    strong акция
+                    br
+                    сегодня
+            .discount
+                p Скидка 
+                    span.red_color 20%
+            p
+                Каждому покупателю #[br] двух шин марки Bics  двух шин марки Bics  двух шин марки Bics

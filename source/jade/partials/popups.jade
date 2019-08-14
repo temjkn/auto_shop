@@ -1,0 +1,17 @@
+.im-popups
+	.im-popup#callback
+		.im-popup-inside
+			+b('form').popup
+				+b('a').popup__close
+				+b('').callback
+					+b('span').title-1 Заказать звонок
+					+e('span').sub-title Наши специалисты ответят на любые ваши вопросы
+					+e('').line
+						+e('').input-wrapper
+							+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' required).input
+						+e('').input-wrapper
+							+b('input')(type='text' name='email' tabindex='2' id='email' placeholder='Электронная почта').input
+					+e('').input-wrapper_high
+						+b('textarea')(name='message' tabindex='3' placeholder='Текст сообщения' required).input_text-area
+					+e('').wrapper
+						+b('input')(type='submit' value='Отправить сообщение').btn-yellow

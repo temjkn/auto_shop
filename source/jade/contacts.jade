@@ -1,0 +1,52 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Контакты
+		include inc/head
+	body(class="p-contacts")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item Контакты
+				+b('').contacts-page
+					+b('').information
+						+b('span').title-1 Контактная информация
+						+e('span').sub-title Адрес:
+						+e('span').text 220085, Республика Беларусь, г. Минск, ул. Селицкого, 25/1
+						+e('span').sub-title Контактные телефоны:
+						+e('span').text <a href='#' class='g-link'>+375 (17) 346-23-98</a>; <a href='#' class='g-link'>+375 (29) 674-674-9</a>
+						+e('span').sub-title Режим работы:
+						+e('span').text 10:00-19:00 пн-пт
+						+e('span').sub-title Электронная почта:
+						+e('span').text_last <a href='#' class='g-link'>info@belhouse.by</a> <br> <a href='#' class='g-link'>director@belhouse.by</a>
+						+b('a').btn-yellow Заказать звонок
+					+b('').feedback
+						+e('').green-wrapper
+							+b('span').title-1_white Обратная связь
+							+e('span').sub-title_white Наши специалисты ответят на любые ваши вопросы
+							+e('').table
+								+e('').cell
+									+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' required).input
+								+e('').cell
+									+b('input')(type='text' name='email' tabindex='2' id='email' placeholder='Электронная почта').input
+							+e('').input-wrapper
+								+b('input')(type='text' name='subject' tabindex='2' id='subject' placeholder='Тема сообщения').input
+							+e('').input-wrapper_high
+								+b('textarea')(name='message' tabindex='3' placeholder='Текст сообщения' required).input_text-area
+							+b('input')(type='submit' value='Отправить сообщение').btn-yellow
+							
+				+b('').map
+
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

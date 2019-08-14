@@ -1,0 +1,53 @@
+.navigationWrap
+    position relative
+    background $black_color  url(../img/back.png)
+    color $white_color
+    font-size .75em
+    font-weight 700
+    box-shadow 0px 6px 5.34px 0.66px rgba(0, 0, 0, 0.75)
+
+
+    div
+        margin $margin_center
+        max-width $max-width
+        position relative
+    a
+        display block
+        line-height 36px
+    .navigationWrap__navList
+        display inline-block
+        margin-left 17px
+        li
+            position relative
+            display inline-block
+            margin-right 14px
+            height 40px
+            padding-right 18px
+        li::after
+            position absolute
+            content ""
+            height 100%
+            top 0 
+            right 0
+            border 2px solid rgba(0, 0, 0, 0.38)
+            box-shadow 0px 0px 3.76px 0.24px rgba(0, 0, 0, 0.75)
+        li:last-child
+            margin-right 0
+            padding-right 0
+        li:last-child::after
+            border none
+    .button
+        position absolute
+        right 3px
+        top 0  
+        background  url(../img/back.png), $red_gradient
+        border-radius 0 0 20px 20px
+        padding-left 19px
+        .basket
+            position: absolute
+            top 8px
+            left 29px
+            background url(../img/shopping.png)
+            width: 22px
+            height 22px
+      

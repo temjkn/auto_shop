@@ -1,0 +1,64 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Каркасный дом, пос. Грушевка
+		include inc/head
+	body(class="p-work")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item О компании
+					+e('a')(href='#').item Портфолио
+					+e('a')(href='#').item Каркасный дом, пос. Грушевка
+				.b-title-1.margin-sm Каркасный дом, пос. Грушевка
+				
+				+b('').project-slider.full-width
+					+e('').wrap.owl-carousel
+						+e('').item
+							+e('img')(src='http://placehold.it/1400x700')
+						+e('').item
+							+e('img')(src='http://placehold.it/1400x700')
+						+e('').item
+							+e('img')(src='http://placehold.it/1400x700')
+					+e('').inform-wrap
+						+e('').text-bottom
+							+b('').table-price.slider
+								+e('').left
+									+e('span').subtitle Общая площадь:
+									+e('span').item 295,3
+									+e('span').caption кв.метров
+								+e('').right
+									+e('span').subtitle этажность:
+									+e('span').item 2
+									+e('span').caption этажа
+					+e('').text
+						+e('span').caption Дом выполнен по проекту “Универсал семейный”
+						+b('a').btn-green Смотреть проект
+				
+				+b('').home-request
+					+e('').left
+						+e('span').title Хотите такой дом?
+						+e('span').text-left оставьте заявку
+					+e('').right
+						+e('span').text Строительство домов по стандартному или индивидуальному проекту. Только лучшие материалы и <span>5 лет гарантии</span>. От звонка нашего менеджера до готового дома — всего 3 месяца! Подайте заявку сейчас и мы рассчитаем смету по вашему проекту <span>бесплатно</span>!
+						+e('').table-wrapper
+							+e('').cell
+								+e('').table-wrapper
+									+e('').cell_half
+										+b('input')(type='text' name='name' tabindex='1' id='name' placeholder='Ваше имя' required).input
+									+e('').cell_half
+										+b('input')(type='text' name='phone' tabindex='2' id='phone' placeholder='Контактный телефон' required).input
+							+e('').cell_btn
+								+b('input')(type='submit' value='Подать заявку').btn-yellow
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

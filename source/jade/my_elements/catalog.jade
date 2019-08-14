@@ -1,0 +1,33 @@
+-var marks=["Continental", "Bridgestone", "Toyo", "Baruum", "Nexen", "Maxxis", "Linglong", "Landsail", "Delinte"];
+ul.catalog
+    h3 КАТАЛОГ
+    li 
+        span.arrow
+        | ТИП АВТО
+        ul.small
+            li
+                a(href="")
+                    Легковой
+            li
+                a(href="")
+                    Грузовой
+    li 
+        span.arrow
+        | СЕЗОН
+        ul.small
+            li
+                a(href="") 
+                    Зимняя
+            li
+                a(href="")
+                    Летняя
+            li
+                a(href="")
+                    Всесезонная
+    li 
+        span.arrow
+        | МАРКИ
+        ul.small
+            for mark in marks
+                li
+                    a(href="")=mark

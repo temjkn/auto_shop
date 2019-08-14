@@ -1,0 +1,308 @@
+html
+	height 100%
+	font-size $rootFontSize, false
+	user-select auto
+
+body
+	font-family "PFDinDisplayPro"
+	min-height 100%
+	position relative
+	-webkit-text-size-adjust 100%
+	-webkit-font-size-adjust 100%
+	// background-color #f1eee9
+	background-color #fff
+	display table
+	table-layout fixed
+	height 100%
+	width 100%
+	min-width 320px
+	&.fix
+		position fixed
+
+img
+	display block
+
+h1, h2, h3, h4, h5
+	color #000
+	line-height 18px
+	font-weight 600
+	margin-bottom 10px
+
+h1
+	display block
+	color #4a4a4a
+	margin 47px 0px
+	font-size 26px
+	font-weight 300
+	&_white
+		color white
+	&.no-margin
+		margin 0
+	&.margin-sm
+		margin-bottom 26px
+h2
+	display block
+	color #4a4a4a
+	font-size 22px
+	margin 26px 0px
+	font-weight 400
+	&.no-margin-top
+		margin-top 0
+h3
+	display block
+	color #4a4a4a
+	font-size 18px
+	margin 26px 0px
+	font-weight 500
+h4
+	display block
+	color #4a4a4a
+	font-size 16px
+	margin-bottom 18px
+	font-weight 500
+h5
+	display block
+	color #4a4a4a
+	font-size 14px
+	margin-bottom 15px
+
+.b-title-1
+	display block
+	color #4a4a4a
+	margin 47px 0px
+	font-size 26px
+	// font-family "PFDinDisplayPro"
+	font-weight 300
+	&_white
+		color white
+	&.no-margin
+		margin 0
+	&.margin-sm
+		margin-bottom 26px
+.b-title-2
+	display block
+	color #4a4a4a
+	font-size 22px
+	margin 26px 0px
+	// font-family "PFDinDisplayPro"
+	font-weight 400
+	&.no-margin-top
+		margin-top 0
+.b-title-3
+	display block
+	color #4a4a4a
+	font-size 18px
+	margin 26px 0px
+	// font-family "PFDinDisplayPro"
+	font-weight 500
+.b-title-4
+	display block
+	color #4a4a4a
+	font-size 18px
+	// font-family "PFDinDisplayPro"
+	font-weight 500
+.b-title-5
+	display block
+	color #4a4a4a
+	font-size 17px
+.b-title-6
+	display block
+	color #4a4a4a
+	font-size 12px
+
+p
+	font-size 16px
+	line-height 24px
+	margin-bottom 26px
+	color #4a4a4a
+	&:last-child
+		margin-bottom 0
+
+ul,ol
+	margin-bottom 15px
+	li
+		position relative
+		margin-bottom 2px
+		// font-family PFDinDisplayPro-Regular
+		font-weight 400
+		font-size 16px
+		line-height 23px
+		&::before
+			display inline-block
+			margin-right 7px
+			content ''
+			sprite($s-marker)
+ul
+	list-style none
+ol
+	li
+		list-style-position inside
+		padding-left 0px
+		color #4a4a4a
+		&::before
+			content none
+
+table
+	width 100%
+	border 1px solid #d3d3d3
+	border-collapse separate
+	overflow hidden
+	// margin 36px 0 32px
+	margin-bottom 20px
+	table-layout fixed
+	th, td
+		padding 14px 18px 20px
+		border-top 1px solid #d3d3d3
+		border-right 1px solid #d3d3d3
+		line-height 20px
+		font-size 14px
+		vertical-align top
+		&:last-child
+			border-right 0
+		&.small
+			width 280px
+			@media $min_md
+				width 320px
+			@media $min_lg
+				width 470px
+		&.xsmall
+			width 220px
+			@media $min_md
+				width 280px
+			@media $min_lg
+				width 380px
+	th
+		font-weight 500
+		padding 2px 20px
+		font-size 16px
+		border-right 1px solid #d9d7d2
+		background-color #d9d7d2
+		text-align left
+	tr
+		&:last-child
+			td, td
+				border-bottom 0
+		&:first-child
+			th,td
+				border-top 0
+
+.p-complect
+	table
+		table-layout auto
+		th
+			background-color #fff
+			font-size 18px
+			font-weight 500
+		th,td
+			font-size 16px
+		th,td
+			padding 26px 28px 24px 28px
+			&:nth-child(3)
+				width 380px
+				@media $min_md
+					width auto
+			
+.table-wrap
+	overflow auto
+	margin-bottom 20px
+	table
+		margin 0
+	
+.b-section-wrap
+	margin-bottom 40px
+	@media $min_md
+		margin-bottom 55px
+
+
+i
+	font-style italic
+
+b, strong
+	font-weight 600
+
+button
+	border 0
+
+a
+	cursor pointer
+	
+.text-medium
+	font-weight 500
+	
+.font-lg
+	font-size 18px
+
+._no-border, ._no-border *
+	border 0
+
+._img-left,
+._img-right
+	margin-bottom 27px
+	margin-top 6px
+
+._img-left
+	float left
+	margin-right 37px
+
+._img-right
+	float right
+	margin-left 37px
+
+._text-center
+	text-align center
+
+._text
+	> p
+		&:last-child
+			margin-bottom 0
+
+.fancybox-skin
+	box-shadow none !important
+	border-radius 0
+
+.fancybox-wrap
+	opacity 0
+
+.owl-carousel .owl-item
+	-webkit-transform translateZ(0)
+
+.swiper-container
+	.swiper-prev, .swiper-next
+		vAlign()
+	.swiper-prev
+		left 0
+	.swiper-next
+		right 0
+
+.-hidden-lg
+	@media $max_lg
+		display none
+.-hidden-md
+	@media $max_md
+		display none
+.-hidden-sm
+	@media $max_sm
+		display none
+.-hidden-xs
+	@media $max_xs
+		display none
+
+.-visible-lg
+	display none
+	@media $max_lg
+		display block
+.-visible-md
+	@media $max_md
+		display block
+	@media $min_lg
+		display none
+.-visible-sm
+	@media $max_sm
+		display block
+	@media $min_md
+		display none
+.-visible-xs
+	@media $max_xs
+		display block
+	@media $max_sm
+		display none

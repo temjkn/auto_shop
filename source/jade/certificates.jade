@@ -1,0 +1,72 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Сертификаты
+		include inc/head
+	body(class="p-certificates")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item О компании
+					+e('a')(href='#').item Сертификаты
+				.b-title-1 Сертификаты
+				+b('').certificates
+					+e('').cols-wrap
+						+e('').col
+							+e('').table
+								+e('').left
+									a(href='http://placehold.it/150x200' data-type="image").fancybox
+										+e('img')(src='http://placehold.it/150x200').cert-img
+								+e('').right
+									+e('').text-wrapper
+										+b('').title-4 Сертификат соответствия. OSB (Ориентированно-стружечная плита, ОСП), OSB-3
+										+e('span').text Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+						+e('').col
+							+e('').table
+								+e('').left
+									a(href='#')
+										+e('img')(src='http://placehold.it/150x200').cert-img
+								+e('').right
+									+e('').text-wrapper
+										+b('').title-4 Сертификат соответствия. Ориентированно-стружечные плиты OSB «KRONOPOL»
+										+e('span').text Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+						+e('').col
+							+e('').table
+								+e('').left
+									a(href='#')
+										+e('img')(src='http://placehold.it/150x200').cert-img
+								+e('').right
+									+e('').text-wrapper
+										+b('').title-4 Сертификат соответствия. OSB (Ориентированно-стружечная плита, ОСП), OSB-3
+										+e('span').text Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+						+e('').col
+							+e('').table
+								+e('').left
+									a(href='#')
+										+e('img')(src='http://placehold.it/150x200').cert-img
+								+e('').right
+									+e('').text-wrapper
+										+b('').title-4 Сертификат соответствия. Ориентированно-стружечные плиты OSB «KRONOPOL»
+										+e('span').text Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+				+b('').pagination
+					+e('').wrapper
+						+e('a')(href='#').arrow_disabled «
+						+e('a')(href='#').item_disabled 1
+						+e('a')(href='#').item 2
+						+e('').item_disabled ...
+						+e('a')(href='#').item 10
+						+e('a')(href='#').item 11
+						+e('a')(href='#').arrow »
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

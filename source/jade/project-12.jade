@@ -1,0 +1,186 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title Проект-12
+		include inc/head
+	body(class="p-project")
+		include partials/header
+		.l-common-wrap
+			.l-container
+				+b('').bread-crumb
+					+e('a')(href='#').item Главная
+					+e('a')(href='#').item Услуги
+					+e('a')(href='#').item Каркасные дома
+					+e('a')(href='#').item Проект 12
+				//- .b-title-1 Проект 12
+				
+				// slider
+			+b('').project-outer-wrap
+				.l-container
+					+b('').project-wrap
+						+e('').left
+							+b('').project-slider
+								+e('').wrap.owl-carousel
+									+e('')(data-slide-id='1').item
+										+e('img')(src='../img/slider-image-test.jpg')
+									+e('')(data-slide-id='2').item
+										+e('img')(src='http://placehold.it/875x502')
+									- for(var i = 3; i < 10; i++)
+										+e('')(data-slide-id=i).item
+											+e('img')(src='../img/slider-image-test.jpg')
+								+e('').thumbs-wrap
+									+b('').project-thumbs-carousel.owl-carousel.js-thumbs-carousel
+										a(href='#' data-id='1').js-thumb-link.js-act
+											+e('img')(src='http://placehold.it/109x97').img
+										- for(var i = 2; i < 10; i++)
+											a(href='#' data-id=i).js-thumb-link
+												+e('img')(src='http://placehold.it/109x97').img
+								+e('').inform-wrap
+									+e('').text-bottom
+										+b('').table-price.slider
+											+e('').left
+												+e('span').subtitle Общая площадь:
+												+e('span').item 295,3
+												+e('span').caption кв.метров
+											+e('').right
+												+e('span').subtitle этажность:
+												+e('span').item 2
+												+e('span').caption этажа
+						+e('').right
+							+b('').project-inform
+								+b('span').title-big Каркасный дом «Универсал-А»
+								+b('').table-price
+									+e('').left
+										+e('span').subtitle стоимость строительства:
+										+e('span').item от 149640.<sup>00</sup>
+										+e('span').caption белорусских рублей
+									+e('').right
+										+e('span').subtitle стоимость комплекта:
+										+e('span').item от 44460.<sup>00</sup>
+										+e('span').caption белорусских рублей
+								+e('').btns-wrap
+									+b('a').btn-yellow Заказать дом
+									+b('a').btn-yellow-border Получить консультацию
+								+e('span').title Базовый комплект поставки включает
+								+e('span').subtitle Наружная стена:
+								+b('').hidden-wrap.js-hidden-wrap
+									+e('').inner
+										+e('').inner-wrap
+											ul
+												li OSB-3 10мм с внешней стороны стены;
+												li OSB-3 10мм с внешней стороны стены;
+												li OSB-3 10мм с внешней стороны стены;
+												li OSB-3 10мм с внешней стороны стены;
+											+e('span').subtitle внутренняя стена:
+											ul
+												li OSB-3 10мм с внешней стороны стены;
+											+e('span').subtitle внутренняя стена:
+											ul
+												li OSB-3 10мм с внешней стороны стены;
+											+e('span').subtitle внутренняя стена:
+											ul
+												li OSB-3 10мм с внешней стороны стены;
+											p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+									a(href='#')(data-text='Скрыть текст').js-show-full-text Показать полностью
+
+			.l-container
+				+b('').jumbotron_inline
+					+b('img')(src='../img/logo-white-sm.png').logo
+					+b('span').title-text Каркасные дома заводского изготовления				
+				+b('').project-green-block
+					+e('').cell_left
+						+e('span').text-left Проект деревянного каркасного дома может быть перепланирован в соответствии с пожеланиями клиента.
+					+e('').cell_right
+						+e('span').text-right Современная технология каркасного строительства была разработана в Канаде. Схожесть климатических условий и удобство монтажа таким домов сделало каркасное строительство популярным. Сейчас на территории Канады большая часть малоэтажных домов выстроена по технологии каркасного строительства.
+				+b('').plan
+					+e('').cell_floors
+						ul
+							li
+								+e('a')(href='#').item_active Подвал
+							li
+								+e('a')(href='#').item Первый этаж
+							li
+								+e('a')(href='#').item Второй этаж
+							li
+								+e('a')(href='#').item Мансарда
+					+e('').tab-item.js-act
+						+e('').cell_img
+							+e('img')(src='http://placehold.it/500x300').plan-img
+						+e('').cell_squares
+							+e('span').title План подвала
+							table
+								tr
+									td Подвал
+									td 9,5
+									td м2
+								tr
+									td Туалет
+									td 2,5
+									td м2
+								tr
+									td Котельная
+									td +
+									td
+								tr
+									td Прачечная
+									td 23
+									td м2
+								tr
+									td Коридор
+									td 1,2
+									td м2
+								tr
+									td Гараж
+									td 60
+									td м2
+								tr
+									td Лестница
+									td 3
+									td м2
+							+e('').sum 100500 м2
+					+e('').tab-item
+						+e('').cell_img
+							+e('img')(src='http://placehold.it/500x300').plan-img
+						+e('').cell_squares
+							+e('span').title Первый этаж
+							table
+								tr
+									td Подвал
+									td 9,5
+									td м2
+								tr
+									td Туалет
+									td 2,5
+									td м2
+								tr
+									td Котельная
+									td +
+									td
+								tr
+									td Прачечная
+									td 23
+									td м2
+								tr
+									td Коридор
+									td 1,2
+									td м2
+								tr
+									td Гараж
+									td 60
+									td м2
+								tr
+									td Лестница
+									td 3
+									td м2
+							+e('').sum 100500 м2
+
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")

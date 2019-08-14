@@ -1,0 +1,23 @@
+{
+  "name": "blank-project-website",
+  "description": "blank project for codding",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.12.0",
+    "normalize": "./source/stylus/vendor-css/normalize.css",
+    "js-helpers": "https://github.com/aivenreach/js-helpers.git",
+    "jQuery": "^3.2.1",
+    "owl.carousel": "^2.2.1",
+    "fancybox": "fancyBox#^3.0.47"
+  }
+}
